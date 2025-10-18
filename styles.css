@@ -27,6 +27,7 @@ body::before {
 .start-section {
   text-align: center;
   padding: 25px;
+  position: relative;
 }
 
 .svg-container {
@@ -40,6 +41,7 @@ body::before {
 }
 
 .start-button {
+  position: relative;
   border: none;
   background-color: transparent;
   margin-top: 20px;
@@ -48,6 +50,16 @@ body::before {
   height: auto;
   max-height: 100%;
   transition: transform 0.3s ease;
+}
+
+.click-me {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-140%) translateY(10%);
+  width: 20vw;
+  /*max-width: 400px;*/
+  pointer-events: none;
+  z-index: 2;
 }
 
 .start-button:hover {
