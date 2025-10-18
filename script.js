@@ -1,19 +1,40 @@
-const categories = [
+const characterData = [
   {
-    name: "SKZOO",
-    options: [
-      "skzoo1.png",
-      "skzoo2.png",
-      "skzoo3.png",
-      "skzoo4.png",
-      "skzoo5.png",
-      "skzoo6.png",
-      "skzoo7.png",
-      "skzoo8.png",
-    ],
+    name: "Wolfchan",
+    categories: [],
+  },
+  {
+    name: "Leebit",
+    categories: [],
+  },
+  {
+    name: "Dwaekki",
+    categories: [],
+  },
+  {
+    name: "Jiniret",
+    categories: [],
+  },
+  {
+    name: "Hanquokka",
+    categories: [],
+  },
+  {
+    name: "Bbokari",
+    categories: [],
+  },
+  {
+    name: "Puppym",
+    categories: [],
+  },
+  {
+    name: "Foxiny",
+    categories: [],
   },
 ];
 
+let selectedCharacter = 0;
+let categories = characterData[selectedCharacter].categories;
 let selectedCategory = 0;
 let selections = new Array(categories.length).fill(0);
 const canvas = document.getElementById("previewCanvas");
@@ -23,15 +44,32 @@ canvas.height = 2048;
 
 function scrollToSelectors() {
   document
-    .querySelector(".select-section")
+    .querySelector(".character-selection")
     .scrollIntoView({ behavior: "smooth" });
+}
+
+function selectCharacter(index) {
+  selectedCharacter = index;
+  categoires = characterData[selectedCharacter].categories;
+  selections = new Array(categories.length).fill(0);
+  selectedCategory = 0;
+  document
+    .querySelectorAll(".character-button")
+    .forEach((btn) => btn.classList.remove("active"));
+  document.getElementById("char" + (index + 1)).classList.add("active");
+  document
+    .querySelectorAll(".category-button")
+    .forEach((btn) => btn.classList.remove("active"));
+  document.getElementById("cat1").classList.add("active");
+  updateOptions();
+  updatePreview();
 }
 
 function selectCategory(index) {
   selectedCategory = index;
   document
     .querySelectorAll(".category-button")
-    .forEach((btn) => btn.classList.remove("active:"));
+    .forEach((btn) => btn.classList.remove("active"));
   document.getElementById("cat" + (index + 1)).classList.add("active");
   updateOptions();
 }
@@ -59,13 +97,19 @@ function selectOption(index) {
 
 function updatePreview() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  selections.forEach((sel, catIndex) => {
-    const img = new Image();
-    img.src = `path/to/${categories[catIndex].options[sel]}`;
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    };
-  });
+
+  const charIMG = new Image();
+  charIMG.src = `path/to/char${selectedCharacter + 1}.png`;
+  charIMG.onload = () => {
+    ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
+    selections.forEach((sel, catIndex) => {
+      const img = new Image();
+      img.src = `path/to/${categories[catIndex].options[sel]}`;
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      };
+    });
+  };
 }
 
 function finishPfp() {

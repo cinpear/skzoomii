@@ -125,8 +125,40 @@ body::before {
   display: block;
 }
 
+.character-selection {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.character-selection h2 {
+  margin-bottom: 20px;
+}
+
+.character-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.character-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
 .select-section {
   padding-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .preview-circle {
@@ -145,21 +177,27 @@ body::before {
 
 .selectors {
   flex: 1;
+  min-width: 300px;
   padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .category-selectors {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 25px;
+  justify-content: center;
+  justify-items: center;
   margin-bottom: 20px;
 }
 
 .category-button {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
+  width: 117px;
+  height: 73px;
+  border-radius: 25px;
   flex-shrink: 0;
-  /* border-radius: 57px; */
   background-color: #c8ebed;
   cursor: pointer;
   background-position: center;
@@ -170,6 +208,8 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  justify-content: center;
 }
 
 .option-button {
@@ -179,7 +219,7 @@ body::before {
   cursor: pointer;
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .popup {
