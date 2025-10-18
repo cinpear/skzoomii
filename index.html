@@ -1,4 +1,40 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKZOOmii</title>
 </head>
+
+<body>
+  <div class="main-container">
+    <div class="start-section">
+      <h1>Placeholder here</h1>
+      <button class="start-button" onclick="scrollToSelectors()">Start</button>
+    </div>
+    <div class="select-section">
+      <div class="categories">
+        <div class="category-circle">
+          <canvas id="categoryCanvas" class="category-canvas"></canvas>
+        </div>
+      </div>
+      <div class="selectors">
+        <div class="category-selectors">
+            <button class="category-button" id="cat1" onclick="selectCategory(0)" style="background-image: url('path/to/category1-icon.png');"</button>
+            <button class="category-button" id="cat1" onclick="selectCategory(1)" style="background-image: url('path/to/category2-icon.png');"</button>
+            <button class="category-button" id="cat1" onclick="selectCategory(2)" style="background-image: url('path/to/category3-icon.png');"</button>
+            <button class="category-button" id="cat1" onclick="selectCategory(3)" style="background-image: url('path/to/category4-icon.png');"</button>
+            <button class="category-button" id="cat1" onclick="selectCategory(4)" style="background-image: url('path/to/category5-icon.png');"</button>
+            <button class="category-button" id="cat1" onclick="selectCategory(5)" style="background-image: url('path/to/category6-icon.png');"</button>
+        </div>
+        <div class="option-selectors" id="optionSelectors"></div>
+      </div>
+    </div>
+    <button class="finish-button" onclick="finishPfp()">Finish</button>
+  </div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>SKZOOmii done</h2>
+        <button class="save-button" onclick="savePfp()">Save SKZOOmii</button>
+    </div>
+  </div>
+</body>
