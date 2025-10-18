@@ -74,6 +74,24 @@ body::before {
   z-index: 2;
 }
 
+.squiggle1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-350%) translateY(-530%);
+  width: 11vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.squiggle2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(280%) translateY(-80%);
+  width: 11.5vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .start-button:hover {
   transform: scale(1.025);
 }
