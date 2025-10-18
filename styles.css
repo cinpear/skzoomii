@@ -27,17 +27,20 @@ body::before {
 .start-section {
   text-align: center;
   padding: 25px;
+  margin-top: 10px;
   position: relative;
 }
 
 .svg-container {
   position: relative;
-  width: 90vw;
+  width: 85vw;
   height: auto;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
   transition: transform 0.3s ease;
+
+  margin: 0 auto;
 }
 
 .start-button {
@@ -45,7 +48,7 @@ body::before {
   border: none;
   background-color: transparent;
   margin-top: 20px;
-  width: 30vw;
+  width: 28vw;
   max-width: 100%;
   height: auto;
   max-height: 100%;
@@ -55,9 +58,18 @@ body::before {
 .click-me {
   position: absolute;
   left: 50%;
-  transform: translateX(-140%) translateY(10%);
+  transform: translateX(-140%) translateY(-2%);
   width: 20vw;
   /*max-width: 400px;*/
+  pointer-events: none;
+  z-index: 2;
+}
+
+.make-pfp {
+  position: absolute;
+  left: 80%;
+  transform: translateX(-10%) translateY(-265%);
+  width: 18.5vw;
   pointer-events: none;
   z-index: 2;
 }
