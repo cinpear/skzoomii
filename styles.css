@@ -92,6 +92,24 @@ body::before {
   z-index: 2;
 }
 
+.heart1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(650%) translateY(-260%);
+  width: 4.5vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.deco1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-390%) translateY(-520%);
+  width: 9vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .start-button:hover {
   transform: scale(1.025);
 }
