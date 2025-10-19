@@ -229,8 +229,8 @@ body::before {
 }
 
 .option-button {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border: 2px solid #eac9a7;
   background-color: white;
   cursor: pointer;
