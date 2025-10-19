@@ -213,11 +213,20 @@ body::before {
   height: 73px;
   border-radius: 25px;
   flex-shrink: 0;
-  background-color: #c8ebed;
+  background-color: white;
   cursor: pointer;
   background-position: center;
   background-size: cover;
-  border: 2px solid #275164;
+  border: 3px solid #eac9a7;
+  transition: transform 0.2s ease;
+}
+
+.category-button.active {
+  background-color: #fcf2e6;
+}
+
+.category-button:hover {
+  transform: scale(1.025);
 }
 
 .option-selectors {
@@ -243,7 +252,7 @@ body::before {
   border-radius: 25px;
 }
 
-.finish-button {
+.option-button .finish-button {
   margin-top: 15px;
   cursor: pointer;
   border: none;
