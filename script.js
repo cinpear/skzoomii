@@ -704,6 +704,10 @@ function updateOptions() {
 function selectOption(index) {
   selections[selectedCategory] = index;
 
+  const optionsDiv = document.getElementById("optionSelectors");
+  const buttons = optionsDiv.querySelectorAll(".option-button");
+  buttons.forEach((btn, i) => btn.classList.toggle("selected", i === index));
+
   const layerIMG = new Image();
   layerIMG.src = `./${categories[selectedCategory].options[index]}`;
 
@@ -777,6 +781,7 @@ function updatePreview() {
 
 function finishPfp() {
   document.getElementById("popup").style.display = "flex";
+  openPopup();
 }
 
 function savePfp() {
@@ -784,6 +789,14 @@ function savePfp() {
   link.download = "skzoomii.png";
   link.href = canvas.toDataURL();
   link.click();
+}
+
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
 }
 
 selectCategory(0);
