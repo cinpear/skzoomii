@@ -8,7 +8,8 @@ const characterData = [
           "handsw1.png",
           "handsw2.png",
           "handsw3.png",
-          "handsw4.png, clear.png",
+          "handsw4.png",
+          "clear.png",
         ],
       },
       {
@@ -85,7 +86,8 @@ const characterData = [
           "handsl1.png",
           "handsl2.png",
           "handsl3.png",
-          "handsl4.png, clear.png",
+          "handsl4.png",
+          "clear.png",
         ],
       },
       {
@@ -162,7 +164,8 @@ const characterData = [
           "handsd1.png",
           "handsd2.png",
           "handsd3.png",
-          "handsd4.png, clear.png",
+          "handsd4.png",
+          "clear.png",
         ],
       },
       {
@@ -239,7 +242,8 @@ const characterData = [
           "handsj1.png",
           "handsj2.png",
           "handsj3.png",
-          "handsj4.png, clear.png",
+          "handsj4.png",
+          "clear.png",
         ],
       },
       {
@@ -316,7 +320,8 @@ const characterData = [
           "handsh1.png",
           "handsh2.png",
           "handsh3.png",
-          "handsh4.png, clear.png",
+          "handsh4.png",
+          "clear.png",
         ],
       },
       {
@@ -393,7 +398,8 @@ const characterData = [
           "handsb1.png",
           "handsb2.png",
           "handsb3.png",
-          "handsb4.png, clear.png",
+          "handsb4.png",
+          "clear.png",
         ],
       },
       {
@@ -470,7 +476,8 @@ const characterData = [
           "handsp1.png",
           "handsp2.png",
           "handsp3.png",
-          "handsp4.png, clear.png",
+          "handsp4.png",
+          "clear.png",
         ],
       },
       {
@@ -547,7 +554,8 @@ const characterData = [
           "handsf1.png",
           "handsf2.png",
           "handsf3.png",
-          "handsf4.png, clear.png",
+          "handsf4.png",
+          "clear.png",
         ],
       },
       {
@@ -681,7 +689,7 @@ function updateOptions() {
   categories[selectedCategory].options.forEach((option, index) => {
     const button = document.createElement("button");
     button.className = "option-button";
-    button.style.backgroundImage = `url('path/to/${option}')`;
+    button.style.backgroundImage = `url('./${option}')`;
     if (selections[selectedCategory] === index) {
       button.classList.add("selected");
     }
@@ -691,7 +699,7 @@ function updateOptions() {
 }
 
 function selectOption(index) {
-  selection[selectedCategory] = index;
+  selections[selectedCategory] = index;
   updateOptions();
   updatePreview();
 }
@@ -705,7 +713,7 @@ function updatePreview() {
     ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
     selections.forEach((sel, catIndex) => {
       const img = new Image();
-      img.src = `./${categories[catIndex].options[sel]}.png`;
+      img.src = `./${categories[catIndex].options[sel]}`;
       img.onload = () => {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
       };
