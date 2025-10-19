@@ -217,15 +217,19 @@ body::before {
   cursor: pointer;
   background-position: center;
   background-size: cover;
+  border: 2px solid #275164;
 }
 
 .option-selectors {
-  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
 
   justify-content: center;
+  max-height: 320px;
+  overflow-y: auto;
 }
 
 .option-button {
@@ -237,6 +241,18 @@ body::before {
   background-size: cover;
   background-position: center;
   border-radius: 25px;
+}
+
+.finish-button {
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.finish-button:hover {
+  transform: scale(1.025);
 }
 
 .popup {
