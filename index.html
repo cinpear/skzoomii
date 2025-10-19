@@ -3,52 +3,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SKZOOmii</title>
-  <link rel="stylesheet" href="styles.css"
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="styles.css"
+    <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
   <div class="main-container">
     <div class="start-section">
-        <div class="svg-container">
-            <img src="skzoomii-title.svg" alt="SKZOOmii" class="svg-image">
-        </div>
-        <div class="click-me">
-            <img src="click-me.svg" class="svg-image">
-        </div>
-        <div class="make-pfp">
-            <img src="make-pfp.svg" class="svg-image">
-        </div>
-        <div class="squiggle1">
-            <img src="squiggle-1.svg" class="svg-image">
-        </div>
-        <div class="squiggle2">
-            <img src="squiggle-2.svg" class="svg-image">
-        </div>
-        <div class="heart1">
-            <img src="heart-1.svg" class="svg-image">
-        </div>
-        <div class="deco1">
-            <img src="deco-1.svg" class="svg-image">
-        </div>
-        <button class="start-button" onclick="scrollToCharacters()">
-            <img src="skzoomii-start.svg" alt="Start button" class="svg-image">
-        </button>
+      <div class="svg-container">
+        <img src="skzoomii-title.svg" alt="SKZOOmii" class="svg-image" />
+      </div>
+      <div class="click-me">
+        <img src="click-me.svg" class="svg-image" />
+      </div>
+      <div class="make-pfp">
+        <img src="make-pfp.svg" class="svg-image" />
+      </div>
+      <div class="squiggle1">
+        <img src="squiggle-1.svg" class="svg-image" />
+      </div>
+      <div class="squiggle2">
+        <img src="squiggle-2.svg" class="svg-image" />
+      </div>
+      <div class="heart1">
+        <img src="heart-1.svg" class="svg-image" />
+      </div>
+      <div class="deco1">
+        <img src="deco-1.svg" class="svg-image" />
+      </div>
+      <button class="start-button" onclick="scrollToCharacters()">
+        <img src="skzoomii-start.svg" alt="Start button" class="svg-image" />
+      </button>
     </div>
     <div class="character-selection">
-        <h2>Choose Your SKZOO</h2>
-        <div class="character-buttons">
-            <button class="character-button" id="char1" onclick="selectCharacter(0)" style="background-image: url(wolfchan.png);"</button>
-            <button class="character-button" id="char2" onclick="selectCharacter(1)" style="background-image: url(leebit.png);"</button>
-            <button class="character-button" id="char3" onclick="selectCharacter(2)" style="background-image: url(dwaekki.png);"</button>
-            <button class="character-button" id="char4" onclick="selectCharacter(3)" style="background-image: url(jiniret.png);"</button>
-            <button class="character-button" id="char5" onclick="selectCharacter(4)" style="background-image: url(hanquokka.png);"</button>
-            <button class="character-button" id="char6" onclick="selectCharacter(5)" style="background-image: url(bbokari.png);"</button>
-            <button class="character-button" id="char7" onclick="selectCharacter(6)" style="background-image: url(puppym.png);"</button>
-            <button class="character-button" id="char8" onclick="selectCharacter(7)" style="background-image: url(foxiny.png);"</button>
-        </div>
+      <h2>Choose Your SKZOO</h2>
+      <div class="character-buttons">
+        <button
+          class="character-button"
+          id="char1"
+          onclick="selectCharacter(0)"
+          style="background-image: url(wolfchan.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char2"
+          onclick="selectCharacter(1)"
+          style="background-image: url(leebit.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char3"
+          onclick="selectCharacter(2)"
+          style="background-image: url(dwaekki.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char4"
+          onclick="selectCharacter(3)"
+          style="background-image: url(jiniret.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char5"
+          onclick="selectCharacter(4)"
+          style="background-image: url(hanquokka.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char6"
+          onclick="selectCharacter(5)"
+          style="background-image: url(bbokari.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char7"
+          onclick="selectCharacter(6)"
+          style="background-image: url(puppym.png)"
+        ></button>
+        <button
+          class="character-button"
+          id="char8"
+          onclick="selectCharacter(7)"
+          style="background-image: url(foxiny.png)"
+        ></button>
+      </div>
     </div>
     <div class="select-section">
       <div class="preview">
@@ -58,13 +106,42 @@
       </div>
       <div class="selectors">
         <div class="category-selectors">
-            <button class="category-button" id="cat1" onclick="selectCategory(0)" style="background-image: url('path/to/category1-icon.png');"</button>
-            <button class="category-button" id="cat2" onclick="selectCategory(1)" style="background-image: url('path/to/category2-icon.png');"</button>
-            <button class="category-button" id="cat3" onclick="selectCategory(2)" style="background-image: url('path/to/category3-icon.png');"</button>
-            <button class="category-button" id="cat4" onclick="selectCategory(3)" style="background-image: url('path/to/category4-icon.png');"</button>
-            <button class="category-button" id="cat5" onclick="selectCategory(4)" style="background-image: url('path/to/category5-icon.png');"</button>
-            <button class="category-button" id="cat6" onclick="selectCategory(5)" style="background-image: url('path/to/category6-icon.png');"</button>
-        </div>
+          <button
+            class="category-button"
+            id="cat1"
+            onclick="selectCategory(0)"
+            style="background-image: url('path/to/category1-icon.png')"
+          ></button>
+          <button
+            class="category-button"
+            id="cat2"
+            onclick="selectCategory(1)"
+            style="background-image: url('path/to/category2-icon.png')"
+          ></button>
+          <button
+            class="category-button"
+            id="cat3"
+            onclick="selectCategory(2)"
+            style="background-image: url('path/to/category3-icon.png')"
+          ></button>
+          <button
+            class="category-button"
+            id="cat4"
+            onclick="selectCategory(3)"
+            style="background-image: url('path/to/category4-icon.png')"
+          ></button>
+          <button
+            class="category-button"
+            id="cat5"
+            onclick="selectCategory(4)"
+            style="background-image: url('path/to/category5-icon.png')"
+          ></button>
+          <button
+            class="category-button"
+            id="cat6"
+            onclick="selectCategory(5)"
+            style="background-image: url('path/to/category6-icon.png')"
+          ></button>
         </div>
         <div class="option-selectors" id="optionSelectors"></div>
       </div>
@@ -73,10 +150,10 @@
   </div>
   <div class="popup" id="popup">
     <div class="popup-content">
-        <h2>SKZOOmii done</h2>
-        <button class="save-button" onclick="savePfp()">Save SKZOOmii</button>
+      <h2>SKZOOmii done</h2>
+      <button class="save-button" onclick="savePfp()">Save SKZOOmii</button>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
-<footer>Made with <3 by Cinders</footer>
+<footer>Made with ♡ by Cinders</footer>

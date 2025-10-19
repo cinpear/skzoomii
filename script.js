@@ -1,35 +1,619 @@
 const characterData = [
   {
     name: "Wolfchan",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsw1.png",
+          "handsw2.png",
+          "handsw3.png",
+          "handsw4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "facew1.png",
+          "facew2.png",
+          "facew3.png",
+          "facew4.png",
+          "facew5.png",
+          "facew6.png",
+          "facew7.png",
+          "facew8.png",
+          "facew9.png",
+          "facew10.png",
+          "facew11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Leebit",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsl1.png",
+          "handsl2.png",
+          "handsl3.png",
+          "handsl4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "facel1.png",
+          "facel2.png",
+          "facel3.png",
+          "facel4.png",
+          "facel5.png",
+          "facel6.png",
+          "facel7.png",
+          "facel8.png",
+          "facel9.png",
+          "facel10.png",
+          "facel11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Dwaekki",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsd1.png",
+          "handsd2.png",
+          "handsd3.png",
+          "handsd4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "faced1.png",
+          "faced2.png",
+          "faced3.png",
+          "faced4.png",
+          "faced5.png",
+          "faced6.png",
+          "faced7.png",
+          "faced8.png",
+          "faced9.png",
+          "faced10.png",
+          "faced11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Jiniret",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsj1.png",
+          "handsj2.png",
+          "handsj3.png",
+          "handsj4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "facej1.png",
+          "facej2.png",
+          "facej3.png",
+          "facej4.png",
+          "facej5.png",
+          "facej6.png",
+          "facej7.png",
+          "facej8.png",
+          "facej9.png",
+          "facej10.png",
+          "facej11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Hanquokka",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsh1.png",
+          "handsh2.png",
+          "handsh3.png",
+          "handsh4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "faceh1.png",
+          "faceh2.png",
+          "faceh3.png",
+          "faceh4.png",
+          "faceh5.png",
+          "faceh6.png",
+          "faceh7.png",
+          "faceh8.png",
+          "faceh9.png",
+          "faceh10.png",
+          "faceh11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Bbokari",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsb1.png",
+          "handsb2.png",
+          "handsb3.png",
+          "handsb4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "faceb1.png",
+          "faceb2.png",
+          "faceb3.png",
+          "faceb4.png",
+          "faceb5.png",
+          "faceb6.png",
+          "faceb7.png",
+          "faceb8.png",
+          "faceb9.png",
+          "faceb10.png",
+          "faceb11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Puppym",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsp1.png",
+          "handsp2.png",
+          "handsp3.png",
+          "handsp4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "facep1.png",
+          "facep2.png",
+          "facep3.png",
+          "facep4.png",
+          "facep5.png",
+          "facep6.png",
+          "facep7.png",
+          "facep8.png",
+          "facep9.png",
+          "facep10.png",
+          "facep11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
   {
     name: "Foxiny",
-    categories: [],
+    categories: [
+      {
+        name: "Hands",
+        options: [
+          "handsf1.png",
+          "handsf2.png",
+          "handsf3.png",
+          "handsf4.png, clear.png",
+        ],
+      },
+      {
+        name: "Headpieces",
+        options: [
+          "head1.png",
+          "head2.png",
+          "head3.png",
+          "head4.png",
+          "head5.png",
+          "head6.png",
+          "head7.png",
+          "head8.png",
+          "head9.png",
+          "head10.png",
+          "clear.png",
+        ],
+      },
+      //bread and cake have top & bottom
+      {
+        name: "Clothes",
+        options: [
+          "cloth1.png",
+          "cloth2.png",
+          "cloth3.png",
+          "cloth4.png",
+          "cloth5.png",
+          "cloth6.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Hoodies",
+        options: [
+          "hoodie1.png",
+          "hoodie2.png",
+          "hoodie3.png",
+          "hoodie4.png",
+          "hoodie5.png",
+          "hoodie6.png",
+          "hoodie7.png",
+          "hoodie8.png",
+          "hoodie9.png",
+          "hoodie10.png",
+          "clear.png",
+        ],
+      },
+      {
+        name: "Faces",
+        options: [
+          "facef1.png",
+          "facef2.png",
+          "facef3.png",
+          "facef4.png",
+          "facef5.png",
+          "facef6.png",
+          "facef7.png",
+          "facef8.png",
+          "facef9.png",
+          "facef10.png",
+          "facef11.png",
+          "clear.png",
+        ],
+      },
+      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+    ],
   },
 ];
 
@@ -54,10 +638,19 @@ function scrollToSelectors() {
     .scrollIntoView({ behavior: "smooth" });
 }
 
+function updateCharacter(index) {
+  const charIMG = new Image();
+  charIMG.src = `./char${index + 1}.png`;
+  charIMG.onload = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
+  };
+}
+
 function selectCharacter(index) {
   scrollToSelectors();
   selectedCharacter = index;
-  categoires = characterData[selectedCharacter].categories;
+  categories = characterData[selectedCharacter].categories;
   selections = new Array(categories.length).fill(0);
   selectedCategory = 0;
   document
@@ -68,6 +661,7 @@ function selectCharacter(index) {
     .querySelectorAll(".category-button")
     .forEach((btn) => btn.classList.remove("active"));
   document.getElementById("cat1").classList.add("active");
+  updateCharacter(index);
   updateOptions();
   updatePreview();
 }
@@ -106,12 +700,12 @@ function updatePreview() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   const charIMG = new Image();
-  charIMG.src = `path/to/char${selectedCharacter + 1}.png`;
+  charIMG.src = `./char${selectedCharacter + 1}.png`;
   charIMG.onload = () => {
     ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
     selections.forEach((sel, catIndex) => {
       const img = new Image();
-      img.src = `path/to/${categories[catIndex].options[sel]}`;
+      img.src = `./${categories[catIndex].options[sel]}.png`;
       img.onload = () => {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
       };
