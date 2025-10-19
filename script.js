@@ -5,16 +5,20 @@ const characterData = [
       {
         name: "Hands",
         options: [
+          "clear.png",
           "handsw1.png",
           "handsw2.png",
           "handsw3.png",
           "handsw4.png",
-          "clear.png",
+          "handsw5.png",
+          "handsw6.png",
+          "handsw7.png",
         ],
       },
       {
         name: "Headpieces",
         options: [
+          "clear.png",
           "head1.png",
           "head2.png",
           "head3.png",
@@ -25,25 +29,25 @@ const characterData = [
           "head8.png",
           "head9.png",
           "head10.png",
-          "clear.png",
         ],
       },
       //bread and cake have top & bottom
       {
         name: "Clothes",
         options: [
+          "clear.png",
           "cloth1.png",
           "cloth2.png",
           "cloth3.png",
           "cloth4.png",
           "cloth5.png",
           "cloth6.png",
-          "clear.png",
         ],
       },
       {
         name: "Hoodies",
         options: [
+          "clear.png",
           "hoodie1.png",
           "hoodie2.png",
           "hoodie3.png",
@@ -54,12 +58,12 @@ const characterData = [
           "hoodie8.png",
           "hoodie9.png",
           "hoodie10.png",
-          "clear.png",
         ],
       },
       {
         name: "Faces",
         options: [
+          "clear.png",
           "facew1.png",
           "facew2.png",
           "facew3.png",
@@ -71,10 +75,9 @@ const characterData = [
           "facew9.png",
           "facew10.png",
           "facew11.png",
-          "clear.png",
         ],
       },
-      { name: "Bg", options: ["bg1.png", "bg2.png", "bg3.png", "clear.png"] },
+      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
     ],
   },
   {
@@ -629,6 +632,8 @@ let selectedCharacter = 0;
 let categories = characterData[selectedCharacter].categories;
 let selectedCategory = 0;
 let selections = new Array(categories.length).fill(0);
+let baseCharIMG = null;
+let layerIMGs = [];
 const canvas = document.getElementById("previewCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 2048;
@@ -647,11 +652,12 @@ function scrollToSelectors() {
 }
 
 function updateCharacter(index) {
-  const charIMG = new Image();
-  charIMG.src = `./char${index + 1}.png`;
-  charIMG.onload = () => {
+  baseCharIMG = new Image();
+  baseCharIMG.src = `./char${index + 1}.png`;
+  baseCharIMG.onload = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(baseCharIMG, 0, 0, canvas.width, canvas.height);
+    updatePreview();
   };
 }
 
@@ -661,6 +667,7 @@ function selectCharacter(index) {
   categories = characterData[selectedCharacter].categories;
   selections = new Array(categories.length).fill(0);
   selectedCategory = 0;
+  layerImages = new Array(categories.length).fill(null);
   document
     .querySelectorAll(".character-button")
     .forEach((btn) => btn.classList.remove("active"));
@@ -671,7 +678,6 @@ function selectCharacter(index) {
   document.getElementById("cat1").classList.add("active");
   updateCharacter(index);
   updateOptions();
-  updatePreview();
 }
 
 function selectCategory(index) {
@@ -700,25 +706,39 @@ function updateOptions() {
 
 function selectOption(index) {
   selections[selectedCategory] = index;
-  updateOptions();
-  updatePreview();
+
+  const layerIMG = new Image();
+  layerIMG.src = `./${categories[selectedCategory].options[index]}`;
+
+  layerIMG.onload = () => {
+    layerImages[selectedCategory] = layerIMG;
+    updatePreview();
+  };
 }
 
 function updatePreview() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!baseCharIMG) {
+    return;
+  }
 
-  const charIMG = new Image();
-  charIMG.src = `./char${selectedCharacter + 1}.png`;
-  charIMG.onload = () => {
-    ctx.drawImage(charIMG, 0, 0, canvas.width, canvas.height);
-    selections.forEach((sel, catIndex) => {
-      const img = new Image();
-      img.src = `./${categories[catIndex].options[sel]}`;
-      img.onload = () => {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      };
-    });
-  };
+  const drawOrder = [
+    "Bg",
+    "Clothes",
+    "Hoodies",
+    "Headpieces",
+    "Faces",
+    "Hands",
+  ];
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(baseCharIMG, 0, 0, canvas.width, canvas.height);
+  drawOrder.forEach((catName) => {
+    const index = categories.findIndex((c) => c.name === catName);
+    const img = layerImages[index];
+    if (img) {
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+  });
 }
 
 function finishPfp() {
