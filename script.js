@@ -628,12 +628,28 @@ const characterData = [
   },
 ];
 
+const specialLayers = {
+  "cloth3.png": {
+    bottom: new Image(),
+    top: new Image(),
+  },
+  "cloth6.png": {
+    bottom: new Image(),
+    top: new Image(),
+  },
+};
+
+specialLayers["cloth3.png"].bottom.src = "./cloth3b.png";
+specialLayers["cloth3.png"].top.src = "./cloth3.png";
+specialLayers["cloth6.png"].bottom.src = "./cloth6b.png";
+specialLayers["cloth6.png"].top.src = "./cloth6.png";
+
 let selectedCharacter = 0;
 let categories = characterData[selectedCharacter].categories;
 let selectedCategory = 0;
 let selections = new Array(categories.length).fill(0);
 let baseCharIMG = null;
-let layerIMGs = [];
+let layerImages = [];
 const canvas = document.getElementById("previewCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 2048;
@@ -717,28 +733,65 @@ function selectOption(index) {
 }
 
 function updatePreview() {
-  if (!baseCharIMG) {
+  if (!baseCharIMG?.complete) {
     return;
   }
 
-  const drawOrder = [
-    "Bg",
-    "Clothes",
-    "Hoodies",
-    "Headpieces",
-    "Faces",
-    "Hands",
-  ];
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(baseCharIMG, 0, 0, canvas.width, canvas.height);
-  drawOrder.forEach((catName) => {
-    const index = categories.findIndex((c) => c.name === catName);
-    const img = layerImages[index];
-    if (img) {
+
+  const bgIndex = categories.findIndex((c) => c.name === "Bg");
+  if (bgIndex >= 0 && layerImages[bgIndex]) {
+    ctx.drawImage(layerImages[bgIndex], 0, 0, canvas.width, canvas.height);
+  }
+
+  const clothesIndex = categories.findIndex((c) => c.name === "Clothes");
+  const clothesSelection = selections[clothesIndex];
+  const clothesName = categories[clothesIndex].options[clothesSelection];
+  const handsIndex = categories.findIndex((c) => c.name === "Hands");
+
+  if (specialLayers[clothesName]?.bottom.complete) {
+    ctx.drawImage(
+      specialLayers[clothesName].bottom,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+  }
+
+  if (baseCharIMG?.complete) {
+    ctx.drawImage(baseCharIMG, 0, 0, canvas.width, canvas.height);
+  }
+
+  layerImages.forEach((img, i) => {
+    if (
+      i !== bgIndex &&
+      i !== clothesIndex &&
+      i !== handsIndex &&
+      img?.complete
+    ) {
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
   });
+
+  const normalClothes = layerImages[clothesIndex];
+  if (normalClothes?.complete) {
+    ctx.drawImage(normalClothes, 0, 0, canvas.width, canvas.height);
+  }
+  if (specialLayers[clothesName]?.top?.complete) {
+    ctx.drawImage(
+      specialLayers[clothesName].top,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+  }
+
+  const handsLayer = layerImages[handsIndex];
+  if (handsLayer?.complete) {
+    ctx.drawImage(handsLayer, 0, 0, canvas.width, canvas.height);
+  }
 }
 
 function finishPfp() {
