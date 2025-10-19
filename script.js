@@ -42,13 +42,20 @@ const ctx = canvas.getContext("2d");
 canvas.width = 2048;
 canvas.height = 2048;
 
-function scrollToSelectors() {
+function scrollToCharacters() {
   document
     .querySelector(".character-selection")
     .scrollIntoView({ behavior: "smooth" });
 }
 
+function scrollToSelectors() {
+  document
+    .querySelector(".select-section")
+    .scrollIntoView({ behavior: "smooth" });
+}
+
 function selectCharacter(index) {
+  scrollToSelectors();
   selectedCharacter = index;
   categoires = characterData[selectedCharacter].categories;
   selections = new Array(categories.length).fill(0);
