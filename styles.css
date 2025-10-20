@@ -119,6 +119,33 @@ body::before {
   z-index: 2;
 }
 
+.deco2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-20%) translateY(800%);
+  width: 7vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.heart2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(470%) translateY(2950%);
+  width: 3vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.so-cute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-500%) translateY(595%);
+  width: 9vw;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .svg-image {
   width: 100%;
   height: auto;
@@ -153,6 +180,11 @@ body::before {
   background-size: cover;
   background-color: white;
   background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.character-button:hover {
+  transform: scale(1.025);
 }
 
 .select-section {
