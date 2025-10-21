@@ -77,7 +77,17 @@ const characterData = [
           "mouthw7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -158,7 +168,17 @@ const characterData = [
           "mouthl7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -239,7 +259,17 @@ const characterData = [
           "mouthd7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -320,7 +350,17 @@ const characterData = [
           "mouthj7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -401,7 +441,17 @@ const characterData = [
           "mouthh7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -482,7 +532,17 @@ const characterData = [
           "mouthb7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -563,7 +623,17 @@ const characterData = [
           "mouthp7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
   {
@@ -643,7 +713,17 @@ const characterData = [
           "mouthf7.png",
         ],
       },
-      { name: "Bg", options: ["clear.png", "bg1.png", "bg2.png", "bg3.png"] },
+      {
+        name: "Bg",
+        options: [
+          "clear.png",
+          "bg1.png",
+          "bg2.png",
+          "bg3.png",
+          "bg4.png",
+          "bg5.png",
+        ],
+      },
     ],
   },
 ];
