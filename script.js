@@ -904,9 +904,28 @@ function finishPfp() {
 }
 
 function savePfp() {
+  const originalCanvas = document.getElementById("previewCanvas");
+  const size = 2048;
+
+  const circleCanvas = document.createElement("canvas");
+  circleCanvas.width = size;
+  circleCanvas.height = size;
+  const ctx = circleCanvas.getContext("2d");
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.clip();
+
+  ctx.drawImage(originalCanvas, 0, 0, size, size);
+  ctx.restore();
+
+  const dataURL = circleCanvas.toDataURL("image/png");
+
   const link = document.createElement("a");
   link.download = "skzoomii.png";
-  link.href = canvas.toDataURL();
+  link.href = dataURL;
   link.click();
 }
 
